@@ -1,4 +1,10 @@
-# ⚛️ 🎵 Reaudio
+
+<div style="text-align: center;" >
+    <img src="https://studio.bio/reaudio/images/reaudio_logo.png" width="200" height="200">
+</div>
+
+<h1 style="text-align: center;">Reaudio</h1>
+
 ### A simple, configureable HTML5 audio component for React.
 #### Features:
 - no dependencies
