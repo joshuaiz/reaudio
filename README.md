@@ -173,6 +173,39 @@ Built-in to Reaudio is the ability to only have one player playing at once so wh
 
 You can combine these into a single playlist visually with css/scss however you will need to add the next/previous playback logic to your app.
 
+### Events
+The `<Player>` component includes a `ref` of the currently playing `<audio>` element which you can use to programmatically control or respond to any events.
+
+See the [full list of HTML5 audio events](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#Events).
+
+Example:
+```jsx
+const audioRef = useRef()
+
+useEffect(() => {
+    const audio = audioRef.current
+
+    const setAudioData = () => {
+        setDuration(audio.duration)
+        setCurTime(audio.currentTime)
+    }
+
+    const setAudioTime = () => setCurTime(audio.currentTime)
+
+    // DOM listeners: update React state on DOM events
+    audio.addEventListener('loadeddata', setAudioData)
+    audio.addEventListener('timeupdate', setAudioTime)
+
+    // ...more stuff here
+
+    return () => {
+        audio.removeEventListener('loadeddata', setAudioData)
+        audio.removeEventListener('timeupdate', setAudioTime)
+    }
+})
+```
+See `Player.js` in the Reaudio folder for the full code.
+
 ### Contributing
 👉 We welcome PRs, issues, and contributions to make Reaudio better.
 
