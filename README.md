@@ -1,9 +1,11 @@
-
+<div style="display:flex;align-items:center;flex-direction:column;justify-content:center;">
 <div style="text-align: center;" >
-    <img src="https://studio.bio/reaudio/images/reaudio_logo.png" width="200" height="200">
+    <img src="https://studio.bio/reaudio/images/reaudio_logo.png" width="150" height="150">
 </div>
 
 <h1 style="text-align: center;">Reaudio</h1>
+
+</div>
 
 ### A simple, configureable HTML5 audio component for React.
 #### Features:
