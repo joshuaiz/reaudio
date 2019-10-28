@@ -10,40 +10,43 @@
 - fully responsive
 
 ## Installation
-**manual (best for customizing):**<br />
+**Manually (best for customizing):**<br />
 If you'd like to make a lot of customizations, copy the [Reaudio component folder](https://github.com/joshuaiz/reaudio/tree/master/src/lib/components/Reaudio) from the GitHub repo and include it in your project.
 
 It has everything you need to get started...you'll just need to supply a playlist array.
 
-**with yarn:**
+**As module with yarn:**
 ```bash
 yarn add reaudio
 ```
-**with npm:**
+**As module with npm:**
 ```bash
 npm i -s reaudio
 ```
+<p>&nbsp;</p>
 
-
+#### Screenshot with multiple players:
 
 ![](https://studio.bio/reaudio/images/reaudio_screenshot.png)
 
 ## Usage
-#### As module: import Reaudio and base styles:
-```javascript
-import React from 'react'
-import Reaudio from 'reaudio'
-import 'reaudio/build/index.css'
-```
-Alternatively you can copy the [base scss styles](https://github.com/joshuaiz/reaudio/blob/master/src/lib/components/Reaudio/assets/styles.scss) into your project from the repo if you use sass/scss.
-
 #### As component (manual): 
+Use this method if you want to customize or add to the players.
 ```javascript
 import React from 'react'
 import Reaudio from './component-folder/Reaudio/Reaudio'
 import './component-folder/Reaudio/assets/styles.css'
 ```
 There is also a `styles.scss` file if you use scss. Be sure to install `node-sass` in your project to use.
+
+#### As module: import Reaudio and base styles:
+Use this method to use Reaudio for simple audio players.
+```javascript
+import React from 'react'
+import Reaudio from 'reaudio'
+import 'reaudio/build/index.css'
+```
+Alternatively you can copy the [base scss styles](https://github.com/joshuaiz/reaudio/blob/master/src/lib/components/Reaudio/assets/styles.scss) into your project from the repo if you use sass/scss.
 
 #### Next, provide a playlist array (required):
 Reaudio expects a playlist array of song/track objects:
@@ -122,17 +125,43 @@ The `playlist` prop is required for Reaudio to work.
 |----------|------------------|-------|---------|
 | playlist | array of objects | Array | []      |
 
+<p>&nbsp;</p>
+
 ### Player Props
-| Props       | Values               | Type    | Default |
-|-------------| -------------------- |---------|---------|
-| source      | url; local url       | String  | ''      |
-| trackName   | any                  | String  | ''      |
-| trackArtist | any                  | String  | ''      |
-| trackImage  | url; local url       | String  | ''      |
-| loop        | true; false          | Boolean | false   |
-| preload     | none; metadata; auto | String  | auto    |
+| Props       | Values                | Type    | Default |
+|-------------| --------------------- |---------|---------|
+| source      | url; local url; array | String  | ''      |
+| trackName   | any                   | String  | ''      |
+| trackArtist | any                   | String  | ''      |
+| trackImage  | url; local url        | String  | ''      |
+| loop        | true; false           | Boolean | false   |
+| preload     | none; metadata; auto  | String  | auto    |
+<p>&nbsp;</p>
+
 
 In addition, any acceptable [HTML5 `<audio>` attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio#Attributes) can be assigned through props.
+
+### Audio sources
+The `source` prop can take either a single url string value or an array of sound sources which can be used to supply fallbacks for certain browsers. 
+
+**Single source example:**
+```jsx
+source: 'https://studio.bio/reaudio/Rafael.mp3',
+```
+
+**Multiple source example:**
+```jsx
+source: [
+  'https://studio.bio/reaudio/Rafael.aif',
+  'https://studio.bio/reaudio/Rafael.mp3'
+],
+```
+
+As per the HTML5 audio spec, the browser will use the first format it can parse.
+
+Reaudio can accept any audio format that HTML5 audio accepts. See the [audio formats docs on MDN](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Audio_codecs).
+
+Note that some browsers can play additional formats like `.aif`.
 
 ### Images
 The `trackImage` prop provides for the display of cover art or other images inline in the player. You can use a full url to an image file or a local url in your project.
@@ -140,12 +169,12 @@ The `trackImage` prop provides for the display of cover art or other images inli
 ### Multiple Players
 The `<Reaudio />` component will output as many individual players as there are track objects in the `playlist` array. 
 
-Built-in to Reaudio is the ability to only have one player playing at once which is really cool.
+Built-in to Reaudio is the ability to only have one player playing at once so when a player is playing, all other players are paused.
 
 You can combine these into a single playlist visually with css/scss however you will need to add the next/previous playback logic to your app.
 
 ### Contributing
-We welcome PRs, issues, and contributions to make Reaudio better.
+👉 We welcome PRs, issues, and contributions to make Reaudio better.
 
 
 
