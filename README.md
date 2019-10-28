@@ -117,9 +117,10 @@ All of the elements can be moved around or hidden via props or css, allowing for
 
 ### Reaudio Props
 The `playlist` prop is required for Reaudio to work.
-| Prop          | Values               | Type   | Default |
-| ------------- | -------------------- | ------ | ------- |
-| playlist      | array of objects     | Array  | []      |
+
+| Prop     | Values           | Type  | Default |
+|----------|------------------|-------|---------|
+| playlist | array of objects | Array | []      |
 
 ### Player Props
 | Props       | Values               | Type    | Default |
