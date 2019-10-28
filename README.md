@@ -32,7 +32,7 @@ yarn add reaudio
 ```bash
 npm i -s reaudio
 ```
-**Include the module in your project:**
+**Include the module and base styles in your project:**
 ```javascript
 import React from 'react'
 import Reaudio from 'reaudio'
