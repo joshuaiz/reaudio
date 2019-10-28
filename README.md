@@ -1,4 +1,4 @@
-<div style="display:flex;align-items:center;flex-direction:column;justify-content:center;">
+<div align="center" style="display:flex;align-items:center;flex-direction:column;justify-content:center;">
 <div style="text-align: center;" >
     <img src="https://studio.bio/reaudio/images/reaudio_logo.png" width="150" height="150">
 </div>
