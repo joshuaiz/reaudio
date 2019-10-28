@@ -1,7 +1,13 @@
 {
   "name": "reaudio",
-  "version": "0.1.0",
+  "version": "0.1.4",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/joshuaiz/reaudio.git"
+  },
   "main": "build/index.js",
+  "author": "Joshua Michaels",
+  "keywords": ["react", "audio", "html5", "html5 audio"],
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",

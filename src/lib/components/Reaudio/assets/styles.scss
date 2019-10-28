@@ -1,0 +1,141 @@
+.player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    margin: 20px;
+    background-color: #dedede;
+    border-radius: 6px;
+    min-height: 36px;
+    .controls {
+        flex-grow: 1;
+        margin: 0 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .track-info {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        margin-right: 20px;
+        position: relative;
+        min-width: 120px;
+        .info-wrap {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            text-align: left;
+            // width: 100%;
+            &:hover, &:focus {
+                direction: rtl;
+                text-overflow: clip;
+            }
+        }
+        .track-image {
+            width: 36px;
+            height: auto;
+            margin-right: 12px;
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+
+    .player__button {
+        // width: fit-content;
+        background-color: transparent;
+        border: none;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            cursor: pointer;
+            svg {
+                color: #222;
+                path {
+                    fill: #222;
+                }
+            }
+        }
+
+        svg {
+            color: #555;
+            width: 28px;
+            height: 28px;
+            path {
+                fill: #555;
+            }
+        }
+    }
+
+    .bar {
+        user-select: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+        .bar__time {
+            color: #444;
+            font-size: 16px;
+            min-width: 40px;
+        }
+
+        .bar__progress {
+            flex: 1;
+            border-radius: 5px;
+            margin: 0 20px;
+            height: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            .bar__progress__knob {
+                position: relative;
+                height: 16px;
+                width: 16px;
+                border: 1.5px solid white;
+                border-radius: 50%;
+                background-color: #555;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .player {
+        .track-info {
+            max-width: 300px;
+            min-width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .player {
+        .track-info {
+            // min-width: 200px;
+            // max-width: 200px;
+            max-width: 150px;
+        }
+
+        .controls {
+            // width: 100%;
+        }
+
+        .bar {
+            // width: 90%;
+            // min-width: 280px;
+        }
+    }
+    
+
+}

@@ -1,8 +1,3 @@
-import Example from './components/Example';
-import SecondExample from './components/SecondExample';
+import Reaudio from './components/Reaudio/Reaudio'
 
-export default Example;
-
-export {
-  SecondExample,
-};
+export default Reaudio
