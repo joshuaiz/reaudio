@@ -1,0 +1,114 @@
+.player {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 12px 0;
+  margin: 20px;
+  background-color: #dedede;
+  border-radius: 6px;
+  min-height: 36px; }
+  .player .controls {
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    margin: 0 12px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center; }
+  .player .track-info {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-right: 20px;
+    position: relative;
+    min-width: 120px; }
+    .player .track-info .info-wrap {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+      text-align: left; }
+      .player .track-info .info-wrap:hover, .player .track-info .info-wrap:focus {
+        direction: rtl;
+        text-overflow: clip; }
+    .player .track-info .track-image {
+      width: 36px;
+      height: auto;
+      margin-right: 12px; }
+      .player .track-info .track-image img {
+        max-width: 100%;
+        height: auto;
+        display: block; }
+  .player .player__button {
+    background-color: transparent;
+    border: none;
+    margin-right: 12px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center; }
+    .player .player__button:focus {
+      outline: none; }
+    .player .player__button:hover {
+      cursor: pointer; }
+      .player .player__button:hover svg {
+        color: #222; }
+        .player .player__button:hover svg path {
+          fill: #222; }
+    .player .player__button svg {
+      color: #555;
+      width: 28px;
+      height: 28px; }
+      .player .player__button svg path {
+        fill: #555; }
+  .player .bar {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-right: 12px; }
+    .player .bar .bar__time {
+      color: #444;
+      font-size: 16px;
+      min-width: 40px; }
+    .player .bar .bar__progress {
+      -webkit-box-flex: 1;
+              flex: 1;
+      border-radius: 5px;
+      margin: 0 20px;
+      height: 10px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+              align-items: center;
+      cursor: pointer; }
+      .player .bar .bar__progress .bar__progress__knob {
+        position: relative;
+        height: 16px;
+        width: 16px;
+        border: 1.5px solid white;
+        border-radius: 50%;
+        background-color: #555; }
+
+@media screen and (min-width: 800px) {
+  .player .track-info {
+    max-width: 300px;
+    min-width: 200px; } }
+
+@media screen and (max-width: 800px) {
+  .player .track-info {
+    max-width: 150px; } }
+/*# sourceMappingURL=styles.css.map */

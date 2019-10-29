@@ -14,10 +14,8 @@
         justify-content: center;
         align-items: center;
     }
-
     .track-info {
         display: flex;
-        // justify-content: space-between;
         align-items: center;
         margin-right: 20px;
         position: relative;
@@ -28,8 +26,9 @@
             text-overflow: ellipsis;
             display: inline-block;
             text-align: left;
-            // width: 100%;
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
+                // shows overflowed text on hover
                 direction: rtl;
                 text-overflow: clip;
             }
@@ -45,9 +44,7 @@
             }
         }
     }
-
     .player__button {
-        // width: fit-content;
         background-color: transparent;
         border: none;
         margin-right: 12px;
@@ -66,7 +63,6 @@
                 }
             }
         }
-
         svg {
             color: #555;
             width: 28px;
@@ -76,7 +72,6 @@
             }
         }
     }
-
     .bar {
         user-select: none;
         width: 100%;
@@ -88,7 +83,6 @@
             font-size: 16px;
             min-width: 40px;
         }
-
         .bar__progress {
             flex: 1;
             border-radius: 5px;
@@ -122,20 +116,7 @@
 @media screen and (max-width: 800px) {
     .player {
         .track-info {
-            // min-width: 200px;
-            // max-width: 200px;
             max-width: 150px;
         }
-
-        .controls {
-            // width: 100%;
-        }
-
-        .bar {
-            // width: 90%;
-            // min-width: 280px;
-        }
     }
-    
-
 }
