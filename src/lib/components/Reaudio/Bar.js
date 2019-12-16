@@ -36,7 +36,7 @@ const Bar = ({ duration, curTime, onTimeUpdate }) => {
             <div
                 className="bar__progress"
                 style={{
-                    background: `linear-gradient(to right, #777 ${curPercentage}%, white 0)`
+                    backgroundImage: `linear-gradient(to right, #777 ${curPercentage}%, #FFF 0)`
                 }}
                 onMouseDown={e => handleTimeDrag(e)}
             >
